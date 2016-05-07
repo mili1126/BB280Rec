@@ -4,12 +4,11 @@ import android.content.Context;
 import android.content.res.AssetManager;
 import android.util.Log;
 
-import com.mili.placerecognitionapp.MainActivity;
-import com.mili.placerecognitionapp.R;
+
+import com.mili.bb280rec.R;
+
 import org.opencv.features2d.DMatch;
-import org.bytedeco.javacpp.opencv_core;
-import org.bytedeco.javacpp.opencv_core.*;
-import org.bytedeco.javacpp.opencv_xfeatures2d;
+
 import org.opencv.android.Utils;
 import org.opencv.core.*;
 //import org.opencv.core.DMatch;
@@ -21,8 +20,6 @@ import org.opencv.features2d.FeatureDetector;
 import org.opencv.features2d.Features2d;
 //import org.opencv.imgcodecs.Imgcodecs;
 import org.opencv.imgproc.Imgproc;
-import org.bytedeco.javacpp.opencv_features2d.Feature2D.*;
-
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Arrays;

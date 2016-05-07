@@ -13,6 +13,7 @@ import android.os.Build;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.v7.app.ActionBarActivity;
+import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -20,7 +21,15 @@ import android.view.SubMenu;
 import android.view.Window;
 import android.view.WindowManager;
 
+import com.mili.bb280rec.filters.Filter;
+import com.mili.bb280rec.filters.RecognitionFilter;
+
+import org.opencv.android.BaseLoaderCallback;
 import org.opencv.android.CameraBridgeViewBase;
+import org.opencv.android.JavaCameraView;
+import org.opencv.android.LoaderCallbackInterface;
+import org.opencv.android.OpenCVLoader;
+import org.opencv.core.Mat;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -30,7 +39,9 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-public class CameraActivity extends Activity
+import uk.co.senab.photoview.PhotoViewAttacher;
+
+public class CameraActivity extends AppCompatActivity
         implements CameraBridgeViewBase.CvCameraViewListener2 {
     private static final String TAG = "CameraActivity";
 
@@ -125,8 +136,6 @@ public class CameraActivity extends Activity
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_camera);
-
-        setHasOptionsMenu(true);
 
 
         final Window window = getWindow();
