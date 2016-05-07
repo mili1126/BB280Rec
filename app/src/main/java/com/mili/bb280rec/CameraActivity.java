@@ -20,6 +20,8 @@ import android.view.SubMenu;
 import android.view.Window;
 import android.view.WindowManager;
 
+import org.opencv.android.CameraBridgeViewBase;
+
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
